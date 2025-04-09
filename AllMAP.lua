@@ -1,7 +1,7 @@
 local HttpMap = "https://www.roblox.com/games/"
 local MyLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectSHub01/60fps/refs/heads/main/Ui60FPS.lua"))()
 
-local Window = MyLibrary:CreateWindow("60 FPS", "Version : Free")
+local Window = MyLibrary:CreateWindow("60 FPS | Community", "Version : Free")
 
 local Page1 = Window:addPage("👾Discord", 1, true, 6)
 local Page2 = Window:addPage("🚀Link Map", 1, true, 6)
