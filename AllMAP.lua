@@ -1,6 +1,3 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectSHub01/60fps/refs/heads/main/What%20the%20fuck.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectSHub01/60fps/refs/heads/main/Bypass.lua"))()
-
 local MyLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectSHub01/60fps/refs/heads/main/Ui60FPS.lua"))()
 
 local Window = MyLibrary:CreateWindow("60 FPS", "Version : Free")
@@ -24,3 +21,4 @@ end)
 Page3:addButton("Script : ฟอร์มช่างขาสั้น 2.2", function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectSHub01/60fps/refs/heads/main/4king.lua"))()
 end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectSHub01/60fps/refs/heads/main/What%20the%20fuck.lua"))()
