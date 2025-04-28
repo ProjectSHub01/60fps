@@ -1,4 +1,4 @@
-local HttpMap = "https://www.roblox.com/games/"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectSHub01/60fps/refs/heads/main/What%20the%20fuck.lua"))()
 local MyLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectSHub01/60fps/refs/heads/main/Ui60FPS.lua"))()
 
 local Window = MyLibrary:CreateWindow("60 FPS", "Version : Free")
