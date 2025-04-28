@@ -22,7 +22,7 @@ function Library:CreateWindow(windowname, windowinfo)
 
     -- UI Setup
     Ui60FPS.Name = "Ui60FPS"
-    Ui60FPS.Parent = game:GetService("CoreGui"):FindFirstChild("RobloxGui").Modules or game.CoreGui
+    Ui60FPS.Parent = game:GetService("CoreGui")
     Ui60FPS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     Ui60FPS.ResetOnSpawn = false
 
