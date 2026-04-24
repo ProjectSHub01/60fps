@@ -29,6 +29,7 @@ if game.PlaceId == 131130916935117 then
         folder.Name = "Rob_Part"
         folder.Parent = workspace
     end
+    --[[
     for _, cf in ipairs({
         --CFrame.new(-587, 17.53125, -634),
         --CFrame.new(540, 16.5312462, -852),
@@ -36,11 +37,12 @@ if game.PlaceId == 131130916935117 then
     }) do
         --game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = cf
         --task.wait(3)
+    --]]
         for _, x in pairs(workspace.Map["\224\184\136\224\184\184\224\184\148\224\184\159\224\184\178\224\184\163\224\185\140\224\184\161"]:GetDescendants()) do
             if x:IsA("BasePart") and x:FindFirstChildOfClass("ProximityPrompt") then
                 x.Parent = folder
             end
-        end
+        --end
     end
 end
 local NameMap = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
@@ -219,7 +221,7 @@ task.spawn(function()
         xpcall(function()
             if _G.FarmSlow then
                 for _, v in pairs(folder:GetChildren()) do
-                    if v:IsA("BasePart") and v.Size.Z < 999 and v.StatusGui.StatusLabel.Text == "พร้อม" then
+                    if v:IsA("BasePart") and v.Size.Z < 999 and v.StatusGui.TextLabel.Text == "พร้อม" then
                     local prompt = v:FindFirstChildWhichIsA("ProximityPrompt", true)
                     workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
                     workspace.CurrentCamera.CameraSubject = v
@@ -245,9 +247,8 @@ end
 local function getAllAvailable()
     local targets = {}
     if not folder then return targets end
-    
     for _, v in pairs(folder:GetChildren()) do
-        if v:IsA("BasePart") and v.Size.Z < 999 and v.StatusGui.StatusLabel.Text == "พร้อม" then
+        if v:IsA("BasePart") and v.Size.Z < 999 and v.StatusGui.TextLabel.Text == "พร้อม" then
             local prompt = v:FindFirstChildWhichIsA("ProximityPrompt", true)
             if prompt and prompt.Enabled and prompt.ActionText == "ทำงาน" and not isInQueue(v) then
                 table.insert(targets, {part = v, prompt = prompt})
@@ -256,6 +257,9 @@ local function getAllAvailable()
     end
     return targets
 end
+
+
+
 
 task.spawn(function()
     while task.wait(0.1) do
